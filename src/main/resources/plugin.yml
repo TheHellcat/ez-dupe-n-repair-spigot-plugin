@@ -1,0 +1,9 @@
+main: net.hellcat.mc.plugins.ezduperepair.Plugin
+name: EZ-Dupe-n-Repair
+version: 0.0.1-alpha1
+description: Adding magic chests for duping items and fixing repair costs
+author: HELLCAT
+prefix: EZ-Dupe-n-Repair
+api-version: 1.10
+authors:
+  - HELLCAT

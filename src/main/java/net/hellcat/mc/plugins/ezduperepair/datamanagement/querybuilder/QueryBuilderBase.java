@@ -2,7 +2,6 @@ package net.hellcat.mc.plugins.ezduperepair.datamanagement.querybuilder;
 
 import net.hellcat.mc.plugins.ezduperepair.datamanagement.querybuilder.expression.Expression;
 import net.hellcat.mc.plugins.ezduperepair.datamanagement.querybuilder.expression.Verb;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;

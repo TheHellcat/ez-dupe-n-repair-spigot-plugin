@@ -28,7 +28,7 @@ public class Main
         HashMap<String, String> whereData2 = new HashMap<>();
         whereData2.put( "column3", "meep%" );
 
-        System.out.println( "" );
+        System.out.println();
 
         System.out.println( "Select query:" );
 
@@ -56,7 +56,7 @@ public class Main
         queryBuilder.insert("test_table", data2);
         System.out.println( queryBuilder.getQuery() );
 
-        System.out.println( "" );
+        System.out.println();
         System.out.println( "Update query:" );
 
         queryBuilder.reset();
@@ -67,7 +67,7 @@ public class Main
         ;
         System.out.println( queryBuilder.getQuery() );
 
-        System.out.println( "" );
+        System.out.println();
         System.out.println( "Delete query:" );
 
         queryBuilder.reset();
@@ -77,6 +77,6 @@ public class Main
         ;
         System.out.println( queryBuilder.getQuery() );
 
-        System.out.println( "" );
+        System.out.println();
     }
 }

@@ -105,10 +105,30 @@ public abstract class QueryBuilderBase
         return this;
     }
 
+    public QueryBuilderBase where( String column, String value )
+    {
+        HashMap< String, String > criteria = new HashMap<>();
+
+        criteria.put( column, value );
+        where( criteria );
+
+        return this;
+    }
+
     public QueryBuilderBase orWhere( HashMap< String, String > criteria )
     {
         whereCount++;
         orWheres.put( whereCount, criteria );
+        return this;
+    }
+
+    public QueryBuilderBase orWhere( String column, String value )
+    {
+        HashMap< String, String > criteria = new HashMap<>();
+
+        criteria.put( column, value );
+        orWhere( criteria );
+
         return this;
     }
 

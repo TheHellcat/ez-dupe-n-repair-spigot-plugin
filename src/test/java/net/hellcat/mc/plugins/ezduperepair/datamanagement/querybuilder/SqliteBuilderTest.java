@@ -2,11 +2,10 @@ package net.hellcat.mc.plugins.ezduperepair.datamanagement.querybuilder;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class SqliteTest
+public class SqliteBuilderTest
 {
     @Test
     public void querySelectTest()
@@ -72,6 +71,15 @@ public class SqliteTest
                 .getQuery();
 
         Assertions.assertEquals( "SELECT * FROM test_table WHERE ( col4 = '1' AND col5 = '2' ) AND id_col = '42' OR ( col4 = '3' AND col5 = '4' );", query, "Sqlite multi-where select query failed" );
+
+        queryBuilder.reset();
+        query = queryBuilder
+                .select("test_table", selectColumn)
+                .where( "col1", "1" )
+                .orWhere( "col2", "2" )
+                .getQuery();
+
+        Assertions.assertEquals( "SELECT * FROM test_table WHERE col1 = '1' OR col2 = '2';", query, "Sqlite single column call where select query failed" );
     }
 
     @Test
